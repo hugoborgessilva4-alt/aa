@@ -1,0 +1,159 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Oswald", Arial, Helvetica, sans-serif;
+    background: #0b0b0b;
+    color: #e5e5e5;
+    line-height: 1.8;
+}
+
+/* ===== HEADER POLICIAL ===== */
+header {
+    background: linear-gradient(145deg, #7a0000, #c40000, #ff1e1e);
+    padding: 45px 0;
+    text-align: center;
+    letter-spacing: 1px;
+    box-shadow: 0 12px 25px rgba(0,0,0,.6);
+    border-bottom: 4px solid #ff0000;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+/* ===== CONTAINER ===== */
+main {
+    max-width: 1150px;
+    margin: 35px auto;
+    padding: 0 18px;
+
+    display: grid;
+    grid-template-columns: 2fr 1.1fr;
+    gap: 25px;
+}
+
+/* ===== CARD BASE ===== */
+.card {
+    background: #0f0f0f;
+    border: 2px solid rgba(255,0,0,.25);
+    border-radius: 14px;
+    padding: 22px;
+    position: relative;
+    box-shadow: 0 12px 25px rgba(0,0,0,.65);
+    transition: .25s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: #ff2c2c;
+}
+
+/* ===== FAIXA CRIME ===== */
+.card::after {
+    content: "ÁREA DE OCORRÊNCIA";
+    position: absolute;
+    top: -14px;
+    left: 18px;
+    background: repeating-linear-gradient(
+        -45deg,
+        #000 0px,
+        #000 10px,
+        #ffdd00 10px,
+        #ffdd00 20px
+    );
+    color: #000;
+    padding: 6px 10px;
+    font-size: .7rem;
+    font-weight: 900;
+    border-radius: 6px;
+}
+
+/* ===== NOTÍCIA PRINCIPAL ===== */
+.noticia-principal {
+    background: radial-gradient(circle at top, #1a1a1a, #060606 50%);
+}
+
+.noticia-principal h2 {
+    font-size: 2rem;
+    color: #ff4d4d;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+}
+
+.noticia-principal p {
+    font-size: 1.1rem;
+}
+
+/* ===== TAG URGENTE ===== */
+.noticia-principal::before {
+    content: "⚠ URGENTE";
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    background: #ff0000;
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 10px;
+    font-size: .75rem;
+}
+
+/* ===== NOTÍCIAS SECUNDÁRIAS ===== */
+.noticias-secundarias h1 {
+    font-size: 1.4rem;
+    margin-top: 18px;
+    color: #ffb3b3;
+    text-transform: uppercase;
+}
+
+.noticias-secundarias h1:not(:first-child) {
+    border-top: 1px solid rgba(255,0,0,.25);
+    padding-top: 14px;
+}
+
+.noticias-secundarias p {
+    margin-top: 6px;
+    color: #dddddd;
+}
+
+/* ===== VÍDEO ===== */
+video {
+    display: block;
+    margin: 16px auto;
+    max-width: 100%;
+    border-radius: 10px;
+    border: 2px solid white;
+    box-shadow: 0 10px 30px rgba(255,0,0,.35);
+    transition: .2s;
+}
+
+video:hover {
+    transform: scale(1.02);
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 18px 0;
+    margin-top: 35px;
+    color: #aaa;
+    border-top: 1px solid rgba(255,0,0,.25);
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 900px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 2.2rem;
+    }
+}
