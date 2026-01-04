@@ -92,19 +92,6 @@ main {
     font-size: 1.1rem;
 }
 
-/* ===== TAG URGENTE ===== */
-.noticia-principal::before {
-    content: "⚠ URGENTE";
-    position: absolute;
-    top: 18px;
-    right: 18px;
-    background: #ff0000;
-    color: #fff;
-    padding: 6px 14px;
-    border-radius: 10px;
-    font-size: .75rem;
-}
-
 /* ===== NOTÍCIAS SECUNDÁRIAS ===== */
 .noticias-secundarias h1 {
     font-size: 1.4rem;
@@ -157,3 +144,4 @@ footer {
         font-size: 2.2rem;
     }
 }
+
